@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #031B49;">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">
+            <img src="assets/Coupe_du_monde_des_clubs_de_la_FIFA.png" alt="" width="auto" height="85">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/" style="padding-left: 30px; padding-right: 25px;"><img src="assets/4.png" alt="Home" width="auto" height="35">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/teams" style="padding-left: 25px; padding-right: 25px; color: #FFD000;"><img src="assets/3.png" alt="Teams" width="auto" height="35"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/nations" style="padding-left: 25px; padding-right: 25px; color: #FFD000;"><img src="assets/1.png" alt="" width="auto" height="35"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/positions" style="padding-left: 25px; padding-right: 25px; color: #FFD000;"><img src="assets/2.png" alt="" width="auto" height="35"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="ml-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item" *ngIf="!isLoggedIn()">
+                    <a class="nav-link" routerLink="/login" style="padding-left: 25px; padding-right: 25px; color: #FFD000; cursor: pointer;"><img src="assets/5.png" alt="" width="auto" height="35"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="ml-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item" *ngIf="isLoggedIn()">
+                    <a class="nav-link" (click)="logout()" style="padding-left: 25px; padding-right: 25px; color: #FFD000; cursor: pointer;">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

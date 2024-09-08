@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="container">
+    <h2 class="mt-4">List of Teams</h2>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let team of teams">
+        <div class="card mb-4">
+          <img [src]="team.image" alt="Logo of {{ team.teamname }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ team.teamname }}</h5>
+            <button class="btn btn-primary" (click)="viewPlayersByTeam(team.teamname)" style="background-color:#031B49 ">View Players</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

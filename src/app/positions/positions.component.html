@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="container mt-5">
+    <h2 class="mt-4">List of Positions</h2>
+
+    <div class="row">
+
+      <div class="col-md-3" *ngFor="let position of positions">
+        <div class="card mb-4">
+          <img [src]="position.image" alt="{{ position.name }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ position.name }}</h5>
+            <button class="btn btn-primary" (click)="viewPlayersByPosition(position.name)" style="background-color:#031B49 ">View Players</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

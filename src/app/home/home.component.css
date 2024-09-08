@@ -1,0 +1,49 @@
+/* styles.css */
+
+body {
+    background-color: #F5F5DC; /* Light Grey */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    height: 100vh;
+}
+
+.welcome-container {
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px; /* Add margin to position it from the left edge */
+}
+
+.welcome-image {
+    max-width: auto;
+    height:500px;
+}
+
+h1 {
+    color: #000080; /* Navy Blue */
+    margin: 20px 0;
+}
+
+p {
+    color: #333333; /* Dark Grey */
+    margin: 10px 0;
+}
+
+.get-started {
+    background-color: #FFD700; /* Gold */
+    color: #000080; /* Navy Blue */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.get-started:hover {
+    background-color: #FFC700; /* Slightly darker gold on hover */
+}

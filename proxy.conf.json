@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": "https://club-world-cup-2025.onrender.com",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
+  

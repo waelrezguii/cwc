@@ -1,0 +1,4 @@
+.table thead th {
+    background-color: #031B49; /* Navy blue background for table headers */
+    color: #FFD000; /* Gold color for table header text */
+}

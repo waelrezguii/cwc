@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-4">
+  <h2>Add New Player</h2>
+  <form [formGroup]="addPlayerForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+    <div class="form-group">
+      <label for="playerName">Player Name:</label>
+      <input type="text" formControlName="player" id="playerName" class="form-control" required>
+      <div class="invalid-feedback">
+        Player Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="playerValue">Player Value:</label>
+      <input type="text" formControlName="value" id="playerValue" class="form-control" required>
+      <div class="invalid-feedback">
+        Player Value is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="teamName">Team Name:</label>
+      <select formControlName="teamname" id="teamName" class="form-control" required>
+        <option *ngFor="let team of teams" [value]="team.teamname">{{ team.teamname }}</option>
+      </select>
+      <div class="invalid-feedback">
+        Team Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="playerPosition">Player Position:</label>
+      <input type="text" formControlName="pos" id="playerPosition" class="form-control" required>
+      <div class="invalid-feedback">
+        Player Position is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="playerNation">Player Nation:</label>
+      <input type="text" formControlName="nation" id="playerNation" class="form-control" required>
+      <div class="invalid-feedback">
+        Player Nation is required.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Player</button>
+  </form>
+</div>
